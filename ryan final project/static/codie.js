@@ -24,12 +24,11 @@ function addBubbleEvent(bubble){
             headers:{
                 'xi-api-key': elevenlabs_api_key,
                 'Content-Type': 'application/json'
-
             },
             body: `{"text": "${bubble.innerHTML.trim()}"}`,
             type: "arrayBuffer"
         }
-        fetch('https://api.elevenlabs.io/v1/text-to-speech/UgBBYS2sOqTuMpoF3BR0', options)
+        fetch('https://api.elevenlabs.io/v1/text-to-speech/NOpBlnGInO9m6vDvFkFC', options)
             .then(async (response) => {
                 const arrayBuffer = await response.arrayBuffer();
                 const blob = new Blob([arrayBuffer], { type: 'audio/wav' });
